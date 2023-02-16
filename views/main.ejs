@@ -1,0 +1,45 @@
+<div class="hero">
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <form action="/convert" method="POST">
+            <div class="form-wrapper">
+                <div class="input-group">
+                    <label for="fromNumber">From:</label>
+                    <input type="number" name="fromNumber" id="fromNumber" placeholder="##">
+                    <div class="custom-select">
+                        <select name="fromUnit" id="fromUnit">
+                            <option value>Select...</option>
+                            <option value="in">Inches</option>
+                            <option value="ft">Feet</option>
+                            <option value="yd">Yards</option>
+                            <option value="mi">Miles</option>
+                            <option value="mm">Milimeters</option>
+                            <option value="cm">Centimeters</option>
+                            <option value="m">Meters</option>
+                            <option value="hm">Hectometers</option>
+                            <option value="km">Kilometers</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="toUnit">To:</label>
+                    <div class="custom-select">
+                        <select name="toUnit" id="toUnit">
+                            <option value="in">Select...</option>
+                            <option value="in">Inches</option>
+                            <option value="ft">Feet</option>
+                            <option value="yd">Yards</option>
+                            <option value="mi">Miles</option>
+                            <option value="mm">Milimeters</option>
+                            <option value="cm">Centimeters</option>
+                            <option value="m">Meters</option>
+                            <option value="hm">Hectometers</option>
+                            <option value="km">Kilometers</option>
+                        </select>
+                    </div>
+                        <button type="submit" id="submit">Convert</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

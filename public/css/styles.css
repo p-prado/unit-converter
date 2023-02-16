@@ -1,0 +1,249 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+    font-kerning: 20px;
+    letter-spacing: 0.2rem;
+}
+
+h1{
+    margin-bottom: 4rem;
+}
+h2{
+    margin-bottom: 2rem;
+}
+
+.hero {
+    background-image: linear-gradient(30deg, rgba(251, 169, 167, 1) 0%, rgba(253, 75, 75, 1) 100%);
+    height: 90vh;
+    max-height: 900px;
+}
+
+.container {
+    max-width: 900px;
+    margin-inline: auto;
+    text-align: center;
+    /* background-color: rgba(0,0,0,0.2); */
+}
+
+.hero .container {
+    padding-block: 5rem;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+input[type=number]{
+    font-family: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.3) transparent;
+    background-color: rgba(255,255,255,0.1);
+    padding: 5px 16px;
+    width: 20ch;
+    max-width: 20ch;
+    font-size: inherit;
+    color: #fff;
+    border-radius: 5px;
+}
+
+input[type=number]::placeholder {
+    color: #ffd9d9;
+}
+
+input[type=number]:focus{
+    outline: none;
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: inherit;
+    width: 150px;
+    display: inline-block;
+    text-align: left;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 5px 16px;
+    border: 2px solid transparent;
+    border-color: transparent transparent rgba(255, 255, 255, 0.3) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* SUBMIT BUTTON */
+#submit {
+    padding: 7px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.3) transparent;
+    border-radius: 5px;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.results {
+    padding: 80px 0;
+    color: #f38686;
+}
+
+.results span {
+    display: inline-block;
+}
+
+.results span.results-numbers {
+    font-size: 1.8rem;
+    font-weight: 300;
+    border: 1px solid;
+    border-radius: 1px;
+    border-color: transparent transparent #f38686 transparent;
+}
+
+.results span.results-units {
+    font-size: 1.3em;
+    color: #fa9a9a;
+}
+
+.results span.results-operator {
+    font-size: 1.8em;
+    margin-inline: 16px;
+}
+
+
+footer{
+    background-color: #f38686;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 800px){
+    h1{
+        margin-bottom: 2rem;
+    }
+    h2{
+        margin-bottom: 1.5rem;
+    }
+
+    .hero{
+        height: 90vh;
+    }
+    .container{
+        max-width: 95%;
+    }
+    
+    .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .select-items div{
+        background-color: rgba(251, 169, 167, 0.9);
+    }
+    
+    .select-items div:hover,
+    .same-as-selected {
+        background-color: rgba(244, 159, 156, 0.97);
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    .hero{
+        height: fit-content;
+    }
+
+    .input-group{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
+
